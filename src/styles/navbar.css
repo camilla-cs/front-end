@@ -1,0 +1,24 @@
+nav {
+    align-content: center;
+    text-align: left;
+    overflow: hidden;
+  }
+  
+  nav > a {
+    margin-top: 2em;
+    margin-left: 2em;
+    text-decoration: none;
+    color: rgb(21, 28, 12);
+    background-color: #dff1f1;
+    padding: 1em 1.5em;
+    border-radius: 2.5em;
+    font-size: large;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    
+  }
+  
+  nav > a:hover {
+    background-color:#fef7ec ;
+  }
