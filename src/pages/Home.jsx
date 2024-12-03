@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer'; 
 import '../styles/home.css'; 
 import desktopImage from '../assets/homepage.png';
+import {Link} from 'react-router-dom'; 
 
 function Home() {
     return (
@@ -20,9 +21,13 @@ function Home() {
                     <p className="subtitle">Discover Anime titles and receive recommendations on what to watch next in a few clicks!</p>
             
                     <div className="buttons">
-                        <button>Sign Up</button>
-                        <button>Login</button>
+                        <Link to="/signup">
+                            <button>Sign Up</button>
+                        </Link>
 
+                        <Link to="/login">
+                            <button>Login</button>
+                        </Link>
                         
                     </div>
 
