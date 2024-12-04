@@ -1,5 +1,9 @@
 // import { BrowserRouter, Route,Routes } from 'react-router-dom';
 import './App.css'
+// import AnimeSearch from './pages/Discover';
+// import ManageUsers from './pages/ManageUsers';
+// import News from './pages/News';
+// import ProfilePage from './pages/Profile';
 // import UserDashboard from './pages/UserDashboard';
 // import Home from './pages/Home';
 // import Login from './pages/Login';
