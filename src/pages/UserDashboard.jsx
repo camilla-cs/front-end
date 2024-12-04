@@ -1,6 +1,6 @@
 import React from "react";
 import '../styles/dashboard.css';
-import userDashImg from '../assets/userdashboard.jpg' ; 
+import userDashImg from '../assets/dashboard.jpg' ; 
 import Footer from "../components/Footer";
 // import {Link} from 'react-router-dom'; 
 
