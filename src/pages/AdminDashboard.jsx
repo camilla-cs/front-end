@@ -1,6 +1,6 @@
 import React from "react";
 import '../styles/dashboard.css';
-import adminDashImg from '../assets/admindashboard.jpg'; 
+import adminDashImg from '../assets/admindashboard.jpeg'; 
 import Footer from "../components/Footer";
 // import {Link} from 'react-router-dom'; 
 
@@ -16,6 +16,7 @@ function AdminDashboard () {
                 <a>USERS</a>
                 <a>NEWS</a>
                 <a>LISTS</a>
+                <a>LOGOUT</a>
             </nav>
 
 

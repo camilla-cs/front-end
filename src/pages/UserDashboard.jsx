@@ -15,6 +15,7 @@ function UserDashboard () {
                 <a>DISCOVER</a>
                 <a>NEWS</a>
                 <a>LISTS</a>
+                <a>LOGOUT</a>
             </nav>
 
 
