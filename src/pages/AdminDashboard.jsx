@@ -1,8 +1,8 @@
 import React from "react";
-import '../styles/admindashboard.css';
+import '../styles/dashboard.css';
 import adminDashImg from '../assets/admindashboard.jpg'; 
 import Footer from "../components/Footer";
-import {Link} from 'react-router-dom'; 
+// import {Link} from 'react-router-dom'; 
 
 
 function AdminDashboard () {
@@ -20,7 +20,7 @@ function AdminDashboard () {
 
 
             <div className="form-container">
-                <h3>Welcome back,Camilla! 🌿</h3>
+                <h3>✩⁺₊✩☽⋆𝖂𝖊𝖑𝖈𝖔𝖒𝖊 𝕭𝖆𝖈𝖐, 𝕮𝖆𝖒𝖎𝖑𝖑𝖆 🐸🌿 ⋆☾✩⁺₊✩ </h3>
 
 
                 
