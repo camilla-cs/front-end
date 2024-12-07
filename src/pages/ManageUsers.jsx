@@ -1,13 +1,20 @@
 import React from "react";
-import '../styles/dashboard.css';
+import '../styles/admindashboard.css';
+import '../styles/userdashboard.css';
 import DashImg from '../assets/dashboard.jpg'; 
 import Footer from "../components/Footer";
-// import {Link} from 'react-router-dom'; 
+import CustomizedMenu from "../components/OptionsButton";
+import { RedirectAdminDashboard } from "../components/RedirectAdminDashboard";
+import {Link} from 'react-router-dom'; 
+
+
+
 
 
 function ManageUsers () {
     return (
         <div>
+         
             <img src={DashImg} alt="studio-ghibli-1" className="admin-img"/>
             <div className="wrapper">
            <nav>
@@ -23,8 +30,12 @@ function ManageUsers () {
             <div className="form-container">
                 <h3>🍡 ℳ𝒶𝓃𝒶ℊℯ 𝒰𝓈ℯ𝓇𝓈 🍙</h3>
                 
-                {/* users list */}
-    
+               <div className="user-container">
+               <CustomizedMenu/>
+               
+               </div>
+
+                <RedirectAdminDashboard/>
                 
             </div>
             </div>

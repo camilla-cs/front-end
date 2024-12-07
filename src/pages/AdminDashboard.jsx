@@ -1,44 +1,52 @@
 import React from "react";
 import Box from '@mui/material/Box';
 import Skeleton from '@mui/material/Skeleton';
-import '../styles/dashboard.css';
+import '../styles/admindashboard.css';
 import adminDashImg from '../assets/dashboard.jpg'; 
 import Footer from "../components/Footer";
+import { Link } from 'react-router-dom'; 
 
-// import {Link} from 'react-router-dom'; 
-
-
-function AdminDashboard () {
+function AdminDashboard() {
     return (
         <div>
-            <img src={adminDashImg} alt="studio-ghibli-1" className="admin-img"/>
-            <div className="wrapper">
-           <nav>
-                <a>PROFILE</a>
-                <a>DISCOVER</a>
-                <a>USERS</a>
-                <a>NEWS</a>
-                <a>LISTS</a>
-                <a>LOGOUT</a>
-            </nav>
+            <img src={adminDashImg} alt="studio-ghibli-1" className="admin-img" />
+            <div className="admin-dashboard-wrapper">
+                <nav className="admin-dashboard-nav">
 
+                <Link to="/profile">
+                    <a>PROFILE</a>
+                </Link>
 
-            <div className="form-container">
-                <h3>✩⁺₊✩☽⋆𝖂𝖊𝖑𝖈𝖔𝖒𝖊 𝕭𝖆𝖈𝖐, 𝕮𝖆𝖒𝖎𝖑𝖑𝖆 🐸🌿 ⋆☾✩⁺₊✩ </h3>
+                <Link to="/discover">
+                    <a>DISCOVER</a>
+                </Link>
 
-                <Box sx={{ width: 1400 }}>
-                <Skeleton />
-                <Skeleton animation="wave" />
-                <Skeleton animation={false} />
-                </Box>
+                <Link to="manageusers">
+                    <a>USERS</a>
+                </Link>
+                <Link to ="/news">
+                    <a>NEWS</a>
+                </Link>
                 
-            </div>
-            </div>
+               
+                <a>LISTS</a>
 
-
-        <Footer/>
+                <Link to="/">
+                    <a>LOGOUT</a>
+                </Link>
+                </nav>
+                <div className="admin-dashboard-form-container">
+                    <h3>✩⁺₊✩☽⋆𝖂𝖊𝖑𝖈𝖔𝖒𝖊 𝕭𝖆𝖈𝖐, 𝕮𝖆𝖒𝖎𝖑𝖑𝖆 🐸🌿 ⋆☾✩⁺₊✩ </h3>
+                    <Box sx={{ width: 1400 }}>
+                        <Skeleton />
+                        <Skeleton animation="wave" />
+                        <Skeleton animation={false} />
+                    </Box>
+                </div>
+            </div>
+            <Footer />
         </div>
     ); 
 }
 
-export default AdminDashboard; 
+export default AdminDashboard;

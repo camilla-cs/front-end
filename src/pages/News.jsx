@@ -1,8 +1,12 @@
 import React from "react";
-import '../styles/dashboard.css';
+import '../styles/admindashboard.css';
+import '../styles/userdashboard.css';
 import DashImg from '../assets/dashboard.jpg'; 
 import Footer from "../components/Footer";
 import SettingsIcon from '@mui/icons-material/Settings';
+import CustomizedMenu from "../components/OptionsButton";
+import { RedirectAdminDashboard } from "../components/RedirectAdminDashboard";
+import { RedirectUserDashboard } from "../components/RedirectUserDashboard";
 // import {Link} from 'react-router-dom'; 
 
 
@@ -25,10 +29,13 @@ function News () {
                 <h3> 📮 𝒜𝓃𝓃ℴ𝓊𝓃𝒸ℯ𝓂ℯ𝓃𝓉𝓈 📜</h3>
 
                 {/* put the icon for each post to edit or delete | just for admin */}
-                <button className="settings-button">{< SettingsIcon/>}</button>
+                <button className="settings-button">{< CustomizedMenu/>}</button>
                 
               
                 <button type="post">Create post</button>
+
+                <RedirectAdminDashboard/>
+                <RedirectUserDashboard/>
                 
             </div>
             </div>

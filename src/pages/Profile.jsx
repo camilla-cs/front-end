@@ -1,8 +1,11 @@
 import React from "react";
-import '../styles/dashboard.css';
+import '../styles/admindashboard.css';
+import '../styles/userdashboard.css';
 import DashImg from '../assets/dashboard.jpg'; 
 import Footer from "../components/Footer";
-// import {Link} from 'react-router-dom'; 
+import { RedirectAdminDashboard } from "../components/RedirectAdminDashboard";
+import { RedirectUserDashboard } from "../components/RedirectUserDashboard";
+import {Link} from 'react-router-dom'; 
 
 
 function ProfilePage () {
@@ -33,6 +36,9 @@ function ProfilePage () {
                     <button type="submit">Submit</button>
                     <button type="delete">Delete account</button>
                 </form>
+
+                <RedirectAdminDashboard/>
+                <RedirectUserDashboard/>
                 
             </div>
             </div>
