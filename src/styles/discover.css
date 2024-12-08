@@ -19,7 +19,7 @@ html, body {
     display: flex;
     flex-grow: 1;
     height: calc(100vh - 15em);
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 nav {
@@ -90,6 +90,42 @@ button {
 
 button:hover {
     background-color: #DFF1F1 ; 
+}
+
+.anime-results {
+    display:flex; 
+    flex-wrap:wrap;
+    gap:1em;
+    justify-content:center;
+    margin-top:1em
+
+}
+
+.anime-card {
+    background-color: #e5d4ef ;
+    border-radius:1em;
+    padding:15px;
+    width:300px;
+    text-align: center;
+    
+}
+
+.anime-card img {
+    width:100%; 
+    border-radius: 8px;
+    height:200px;
+    object-fit: cover;
+}
+
+.anime-card h4 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.anime-card p {
+    font-size: 14px;
+    color: #555;
 }
 
 
