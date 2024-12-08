@@ -31,7 +31,7 @@ function UserDashboard() {
                 </Link>
                 </nav>
                 <div className="user-dashboard-form-container">
-                    <h3>꧁✬◦°⋆⋆°◦. 𝓦𝓮𝓵𝓬𝓸𝓶𝓮 𝓑𝓪𝓬𝓴 🍵🌸 ◦°⋆⋆°◦✬꧂</h3>
+                    <h3>꧁✬◦°⋆⋆°◦. 𝓦𝓮𝓵𝓬𝓸𝓶𝓮 🍵🌸 ◦°⋆⋆°◦✬꧂</h3>
                     <Box sx={{ width: 1400 }}>
                         <Skeleton />
                         <Skeleton animation="wave" />
