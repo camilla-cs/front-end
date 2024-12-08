@@ -40,38 +40,42 @@ body, html {
 }
 .buttons {
     margin-top: 10px;
+
+    & button{
+        margin: 0 10px;
+        font-size: 1rem;
+        background-color: #dff1f1;
+        color: black;
+        border: none;
+        padding: 1em 1.5em;
+        border-radius: 2.5em;
+        cursor: pointer;
+    }
+    
+    & button:hover {
+        background-color: #fef7ec;
+    } 
     
 }
 
-.buttons > button {
-    margin: 0 10px;
-    font-size: 1rem;
-    background-color: #dff1f1;
-    color: black;
-    border: none;
-    padding: 1em 1.5em;
-    border-radius: 2.5em;
-    cursor: pointer;
-}
 
-.buttons > button:hover {
-    background-color: #fef7ec;
-} 
 
 @media screen and (max-width:1000px) {
     .content {
         flex-direction: column;
         align-items: center;
         padding:20px;
+
+        & .text-content {
+            max-width: 100%; 
+            text-align: center;
+            font-size: x-large;
+        }
         
       
     }
 
-    .text-content {
-        max-width: 100%; 
-        text-align: center;
-        font-size: x-large;
-    }
+    
 
     .image > img {
         max-width: 100%;
