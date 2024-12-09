@@ -47,14 +47,14 @@ function AnimeSearch () {
         setError(null);
 
         try {
-            const response = await fetch (`http://localhost:8080/anime/browse?genres=${genre}&year=${year}`);
+            const response = await fetch (`http://localhost:8080/anime/genre?genre=${genre}&year=${year}`);
             if (!response.ok) {
                 throw new Error("Failed to fetch filtered anime.");
             }
 
             const data = await response.json();
             console.log("Filtered anime data:" , data);
-            setAnimeList(data.data || []); 
+            setAnimeList(data.genres || []); 
 
         } catch (error) {
             setError(error.message); 
@@ -117,90 +117,97 @@ function AnimeSearch () {
             </form>
 
             <form onSubmit={handleFilter}>
+                
                 <select value={genre} onChange={(e) => setGenre(e.target.value)}>
                     <option value="">Select genre</option>
-                    <option value="Action">Action</option>
-                    <option value="Adventure">Adventure</option>
-                    <option value="Avant Garde">Avant Garde</option>
-                    <option value="Award Winning">Award Winning</option>
-                    <option value="Boys Love">Boys Love</option>
-                    <option value="Comedy">Comedy</option>
-                    <option value="Drama">Drama</option>
-                    <option value="Fantasy">Fantasy</option>
-                    <option value="Girls Love">Girls Love</option>
-                    <option value="Gourmet">Gourmet</option>
-                    <option value="Horror">Horror</option>
-                    <option value="Mystery">Mystery</option>
-                    <option value="Romance">Romance</option>
-                    <option value="Sci-Fi">Sci-Fi</option>
-                    <option value="Slice of Life">Slice of Life</option>
-                    <option value="Sports">Sports</option>
-                    <option value="Supernatural">Supernatural</option>
-                    <option value="Suspence">Suspence</option>
-                    <option value="Ecchi">Ecchi</option>
-                    <option value="Erotica">Erotica</option>
-                    <option value="Hentai">Hentai</option>
-                    <option value="Adult Cast">Adult Cast</option>
-                    <option value="Antropomorphic">Antropomorphic</option>
-                    <option value="CGDCT">CGDCT</option>
-                    <option value="Childcare">Childcare</option>
-                    <option value="Combat Sports">Combat Sports</option>
-                    <option value="Crossdressing">Crossdressing</option>
-                    <option value="Delinquents">Delinquents</option>
-                    <option value="Detective">Detective</option>
-                    <option value="Educational">Educational</option>
-                    <option value="Gag Humor">Gag Humor</option>
-                    <option value="Gore">Gore</option>
-                    <option value="Harem">Harem</option>
-                    <option value="High Stackes Game">High Stackes Game</option>
-                    <option value="Historical">Historical</option>
-                    <option value="Idols (Female)">Idols (Female)</option>
-                    <option value="Idols (Male)">Idols (Male)</option>
-                    <option value="Isekai">Isekai</option>
-                    <option value="Iyashikei">Iyashikei</option>
-                    <option value="Love Polygon">Love Polygon</option>
-                    <option value="Magical Sex Shift">Magical Sex Shift</option>
-                    <option value="Mahou Shoujo">Mahou Shoujo</option>
-                    <option value="Martial Arts">Martial Arts</option>
-                    <option value="Mecha">Mecha</option>
-                    <option value="Medical">Medical</option>
-                    <option value="Military">Military</option>
-                    <option value="Music">Music</option>
-                    <option value="Mythology">Mythology</option>
-                    <option value="Organized Crime">Organized Crime</option>
-                    <option value="Otaku Culture">Otaku Culture</option>
-                    <option value="Parody">Parody</option>
-                    <option value="Performing Arts">Performing Arts</option>
-                    <option value="Pets">Pets</option>
-                    <option value="Psychological">Psychological</option>
-                    <option value="Racing">Racing</option>
-                    <option value="Reincarnation">Reincarnation</option>
-                    <option value="Reverse Harem">Reverse Harem</option>
-                    <option value="Love Status Quo">Love Status Quo</option>
-                    <option value="Samurai">Samurai</option>
-                    <option value="School">School</option>
-                    <option value="Showbiz">Showbiz</option>
-                    <option value="Space">Space</option>
-                    <option value="Strategy Game">Strategy Game</option>
-                    <option value="Super Power">Super Power</option>
-                    <option value="Survival">Survival</option>
-                    <option value="Team Sports">Team Sports</option>
-                    <option value="Time Travel">Time Travel</option>
-                    <option value="Vampire">Vampire</option>
-                    <option value="Video Game">Video Game</option>
-                    <option value="Visual Arts">Visual Arts</option>
-                    <option value="Workplace">Workplace</option>
-                    <option value="Urban Fantasy">Urban Fantasy</option>
-                    <option value="Villainess">Villainess</option>
-                    <option value="Josei">Josei</option>
-                    <option value="Kids">Kids</option>
-                    <option value="Seinen">Seinen</option>
-                    <option value="Shoujo">Shoujo</option>
-                    <option value="Shounen">Shounen</option>
+                    <option value="1">Action</option>
+                    <option value="2">Adventure</option>
+                    <option value="5">Avant Garde</option>
+                    <option value="46">Award Winning</option>
+                    <option value="28">Boys Love</option>
+                    <option value="4">Comedy</option>
+                    <option value="8">Drama</option>
+                    <option value="10">Fantasy</option>
+                    <option value="26">Girls Love</option>
+                    <option value="47">Gourmet</option>
+                    <option value="14">Horror</option>
+                    <option value="7">Mystery</option>
+                    <option value="22">Romance</option>
+                    <option value="24">Sci-Fi</option>
+                    <option value="36">Slice of Life</option>
+                    <option value="30">Sports</option>
+                    <option value="37">Supernatural</option>
+                    <option value="41">Suspence</option>
+                    <option value="9">Ecchi</option>
+                    <option value="49">Erotica</option>
+                    <option value="12">Hentai</option>
+                    <option value="50">Adult Cast</option>
+                    <option value="51">Antropomorphic</option>
+                    <option value="52">CGDCT</option>
+                    <option value="53">Childcare</option>
+                    <option value="54">Combat Sports</option>
+                    <option value="81">Crossdressing</option>
+                    <option value="55">Delinquents</option>
+                    <option value="39">Detective</option>
+                    <option value="56">Educational</option>
+                    <option value="57">Gag Humor</option>
+                    <option value="58">Gore</option>
+                    <option value="35">Harem</option>
+                    <option value="59">High Stackes Game</option>
+                    <option value="13">Historical</option>
+                    <option value="60">Idols (Female)</option>
+                    <option value="61">Idols (Male)</option>
+                    <option value="62">Isekai</option>
+                    <option value="63">Iyashikei</option>
+                    <option value="64">Love Polygon</option>
+                    <option value="65">Magical Sex Shift</option>
+                    <option value="66">Mahou Shoujo</option>
+                    <option value="17">Martial Arts</option>
+                    <option value="18">Mecha</option>
+                    <option value="67">Medical</option>
+                    <option value="38">Military</option>
+                    <option value="19">Music</option>
+                    <option value="6">Mythology</option>
+                    <option value="68">Organized Crime</option>
+                    <option value="69">Otaku Culture</option>
+                    <option value="20">Parody</option>
+                    <option value="70">Performing Arts</option>
+                    <option value="71">Pets</option>
+                    <option value="40">Psychological</option>
+                    <option value="3">Racing</option>
+                    <option value="72">Reincarnation</option>
+                    <option value="73">Reverse Harem</option>
+                    <option value="74">Love Status Quo</option>
+                    <option value="21">Samurai</option>
+                    <option value="23">School</option>
+                    <option value="75">Showbiz</option>
+                    <option value="29">Space</option>
+                    <option value="11">Strategy Game</option>
+                    <option value="31">Super Power</option>
+                    <option value="76">Survival</option>
+                    <option value="77">Team Sports</option>
+                    <option value="78">Time Travel</option>
+                    <option value="32">Vampire</option>
+                    <option value="79">Video Game</option>
+                    <option value="80">Visual Arts</option>
+                    <option value="48">Workplace</option>
+                    <option value="82">Urban Fantasy</option>
+                    <option value="83">Villainess</option>
+                    <option value="43">Josei</option>
+                    <option value="15">Kids</option>
+                    <option value="42">Seinen</option>
+                    <option value="25">Shoujo</option>
+                    <option value="27">Shounen</option>
                 </select>
-
-                <input type="number" placeholder="Release Year" value={year} onChange={(e) => setYear(e.target.value)}/>
-                <button type="filter">Filter</button>
+                    <label htmlFor="year">Release Year:</label>
+                    <input
+                        id="year"
+                        type="number"
+                        placeholder="Release Year"
+                        value={year}
+                        onChange={(e) => setYear(e.target.value)}
+                    />
+                <button type="filter" onClick={handleFilter}>Filter</button>
             </form>
                
                 <button onClick={fetchRandomAnime}> Get Random Anime 🔀 </button>
