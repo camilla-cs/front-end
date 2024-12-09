@@ -1,11 +1,11 @@
-html, body {
+/* html, body {
     margin: 0;
     width: 100%;
     height: 100%;
     background-color: #c5d8aa;
     display: flex;
     flex-direction: column;
-}
+} */
 
 .admin-img {
     display: block;
@@ -15,14 +15,14 @@ html, body {
 }
 
 /*wrapper for navbar and content*/
-.wrapper {
+.discover-wrapper {
     display: flex;
     flex-grow: 1;
     height: calc(100vh - 15em);
-    /* overflow: hidden; */
+    
 }
 
-nav {
+.discover-nav {
     width:20%; 
     padding: 1em; 
     box-sizing: border-box;
@@ -33,7 +33,7 @@ nav {
     
 }
 
-nav > a{
+.discover-nav > a{
     display: block;
     background-color:#DAE3DD ;
     width: 6em;
@@ -46,13 +46,13 @@ nav > a{
 }
 
 
-nav >a:hover {
+.discover-nav >a:hover {
     background-color:#F6A275; 
     transition: 1s ease;
     cursor: pointer;
 }
 
-.form-container {
+.discover-form-container {
     flex-grow: 1; 
     background-color: #3c8893;
     border-radius: 1em;
@@ -61,6 +61,7 @@ nav >a:hover {
     color: #19241f;
     text-align: center;
     box-sizing: border-box;
+    max-width: 70%;
     
 }
 
@@ -76,14 +77,14 @@ input {
 }
 
 
-button {
+.search-button {
     width:10em; 
     padding: 0.7em; 
     font-size: medium;
-    background-color: #F6A275;
+    background-color: #94b7f7;
     color: black;
     border: none; 
-    border-radius: 5px; 
+    border-radius: 5em; 
     cursor: pointer; 
     transition: background-color 0.3s ease; 
 }
@@ -97,7 +98,8 @@ button:hover {
     flex-wrap:wrap;
     gap:1em;
     justify-content:center;
-    margin-top:1em
+    margin-top:1em;
+    
 
 }
 
@@ -105,7 +107,7 @@ button:hover {
     background-color: #e5d4ef ;
     border-radius:1em;
     padding:15px;
-    width:300px;
+    width:15em;
     text-align: center;
     
 }
@@ -136,7 +138,7 @@ button:hover {
 
 
 
-    nav {
+    .discover-nav {
         width: 100%;
         border-right:none; 
         align-items: center;
