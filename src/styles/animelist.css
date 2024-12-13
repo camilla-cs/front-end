@@ -7,15 +7,14 @@
 }
 
 /*wrapper for navbar and content*/
-.discover-wrapper {
+.list-wrapper {
     display: flex;
     flex-grow: 1;
     height: calc(100vh - 15em);
- 
     
 }
 
-.discover-nav {
+.list-nav {
     width:20%; 
     padding: 1em; 
     box-sizing: border-box;
@@ -26,7 +25,7 @@
     
 }
 
-.discover-nav > a{
+.list-nav > a{
     display: block;
     background-color:#DAE3DD ;
     width: 6em;
@@ -39,13 +38,13 @@
 }
 
 
-.discover-nav >a:hover {
+.list-nav >a:hover {
     background-color:#F6A275; 
     transition: 1s ease;
     cursor: pointer;
 }
 
-.discover-form-container {
+.list-form-container {
     flex-grow: 1; 
     background-color: #3c8893;
     border-radius: 1em;
@@ -70,51 +69,9 @@
 
 }
 
-form > .recs-button {
-    width:20em; 
-    padding: 0.7em; 
-    margin-bottom: 1em;
-    border-radius: 5em;
-    box-sizing: border-box;
-    font-size: 1em;
-}
 
 
-.search-button {
-    width:10em; 
-    padding: 0.7em; 
-    font-size: medium;
-    background-color: #F6A275;
-    color: black;
-    border: none; 
-    border-radius: 5em; 
-    cursor: pointer; 
-    transition: background-color 0.3s ease; 
-}
 
-.filter-button {
-    width:10em; 
-    padding: 0.7em; 
-    font-size: medium;
-    background-color: #F6A275;
-    color: black;
-    border: none; 
-    border-radius: 5em; 
-    cursor: pointer; 
-    transition: background-color 0.3s ease; 
-}
-
-.random-button {
-    width:15em; 
-    padding: 0.7em; 
-    font-size: medium;
-    background-color: #F6A275;
-    color: black;
-    border: none; 
-    border-radius: 5em; 
-    cursor: pointer; 
-    transition: background-color 0.3s ease; 
-}
 
 button:hover {
     background-color: #DFF1F1 ; 
@@ -134,7 +91,7 @@ button:hover {
     background-color: #e5d4ef ;
     border-radius:1em;
     padding:15px;
-    width:15em;
+    width:10em;
     text-align: center;
     
 }
@@ -159,20 +116,23 @@ button:hover {
 
 
 @media screen and (max-width:1000px) {
-    .discover-wrapper {
+    .list-wrapper {
         flex-direction: column;
     }
 
 
 
-    .discover-nav {
+    .list-nav {
         width: 100%;
         border-right:none; 
         align-items: center;
+       overflow: scroll;
     }
 
-    .discover-form-container{
+    .list-form-container{
         width: 90%;
+     
+        
     }
     
 }

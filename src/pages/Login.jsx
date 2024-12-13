@@ -28,12 +28,15 @@ function Login () {
             if (!response.ok) {
                 const errorData = await response.json();
                 throw new Error(errorData.message || "Failed to login.");
+                
             }
 
             const data = await response.json();
 
             // Store JWT in localStorage
             localStorage.setItem("token", data.jwt);
+            localStorage.setItem("userId", data.user.id);
+            localStorage.setItem("isAdmin", data.user.isAdmin);
 
             // Redirect based on user type
             if (data.user.isAdmin) {

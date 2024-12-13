@@ -24,7 +24,8 @@ function UserDashboard() {
                 <a>NEWS</a>
                 </Link>
 
-                <a>LISTS</a>
+                <Link to ="/lists"><a>LISTS</a></Link>
+                
 
                 <Link to="/">
                 <a>LOGOUT</a>

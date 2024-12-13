@@ -6,8 +6,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
-import { RedirectUserDashboard } from "../components/RedirectUserDashboard";
-import { RedirectAdminDashboard } from "../components/RedirectAdminDashboard";
+import {Link} from "react-router-dom"
+
 
 
 function AnimeSearch () {
@@ -114,12 +114,22 @@ function AnimeSearch () {
             <img src={DashImg} alt="studio-ghibli-2" className="admin-img"/>
             <div className="discover-wrapper">
            <nav className="discover-nav">
-                <a>PROFILE</a>
-                <a>DISCOVER</a>
-                <a>USERS</a>
+            
+                <Link to="/profile">
+                    <a>PROFILE</a>
+                </Link>
+
+                <Link to="/discover">
+                    <a>DISCOVER</a>
+                </Link>
+
+               < Link to ="/news">
                 <a>NEWS</a>
-                <a>LISTS</a>
-                <a>LOGOUT</a>
+                </Link>
+                <Link to ="/lists"><a>LISTS</a></Link>
+                <Link to="/">
+                    <a>LOGOUT</a>
+                </Link>
             </nav>
 
 
@@ -129,7 +139,7 @@ function AnimeSearch () {
 
                 {/* search anime by title */}
                 <form onSubmit={handleSearch}>
-                    <input type="anime" placeholder="Type anime title... " value={searchQuery} onChange={(e)=> setSearchQuery(e.target.value)}/>
+                    <input className="input-button" type="anime" placeholder="Type anime title... " value={searchQuery} onChange={(e)=> setSearchQuery(e.target.value)}/>
                     <Tooltip title="Search" arrow>
                         <IconButton type="submit">
                         
@@ -224,22 +234,16 @@ function AnimeSearch () {
                         <option value="27">Shounen</option>
                     </select>
                       
-                        <input
-                            id="year"
-                            type="number"
-                            placeholder="Release Year"
-                            value={year}
-                            onChange={(e) => setYear(e.target.value)}
-                        />
-                    <button type="filter" onClick={handleFilter}>Filter</button>
+                        
+                    <button className="filter-button" type="filter" onClick={handleFilter}>Filter</button>
                 </form>
                
-                <button onClick={fetchRandomAnime}> Get Random Anime 🔀 </button>
+                <button className="random-button"onClick={fetchRandomAnime}> Get Random Anime 🔀 </button>
                
                
                 <form onSubmit={fetchRecommendations}>
-                    <input type="text" placeholder="Type anime title for recommendations ..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}/>
-                    <button type="recommendations">Get recommendations ✨</button>
+                    <input className="input-button" type="text" placeholder="Type anime title for recommendations ..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}/>
+                    <button className="recs-button"type="recommendations">Get recommendations ✨</button>
                 </form>
                
             
@@ -261,7 +265,7 @@ function AnimeSearch () {
                             <h4>{anime.title}</h4>
                             <h5>{anime.title_japanese}</h5>
                             <p>{anime.type}</p>
-                            <p>{anime.start_date}</p>
+                            <p>{anime.aired.string}</p>
                             <p>{anime.synopsis}</p>
                         </div>
                         );
@@ -273,17 +277,19 @@ function AnimeSearch () {
 
                 <div className="anime-results">
                         {recommendations.length > 0 &&
-                            recommendations.map((rec, index) => (
-                                <div key={`${rec.entry.mal_id}-${index}`} className="anime-card">
-                                    <img src={rec.entry.images.jpg.image_url} alt={rec.entry.title} />
-                                    <h4>{rec.entry.title}</h4>
+                            recommendations.map((anime, index) => (
+                                <div key={`${anime.entry.mal_id}-${index}`} className="anime-card">
+                                    <img src={anime.entry.images.jpg.image_url} alt={anime.entry.title} />
+                                    <h4>{anime.entry.title}</h4>
+                                    
+                                    
+
                                 </div>
                             ))}
                 </div>
 
 
-                <RedirectUserDashboard/>
-                <RedirectAdminDashboard/>
+
                 </div>
             </div>
 

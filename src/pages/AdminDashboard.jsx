@@ -1,12 +1,45 @@
-import React from "react";
-import Box from '@mui/material/Box';
-import Skeleton from '@mui/material/Skeleton';
+import React,{useState, useEffect} from "react";
 import '../styles/admindashboard.css';
 import adminDashImg from '../assets/dashboard.jpg'; 
 import Footer from "../components/Footer";
 import { Link } from 'react-router-dom'; 
 
 function AdminDashboard() {
+
+    const [users, setUsers] = useState([]);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchUsers = async () => {
+            try {
+                const response = await fetch("http://localhost:8080/adminDashboard", {
+                    method:"GET",
+                    headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+                });
+                if (!response.ok) throw new Error("Failed to fetch users");
+                const data = await response.json();
+                setUsers(data);
+            } catch (err) {
+                setError(err.message);
+            }
+        };
+
+        fetchUsers();
+    }, []);
+
+    const handleDelete = async (id) => {
+        try {
+            const response = await fetch(`http://localhost:8080/profile/${id}`, {
+                method: "DELETE",
+                headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+            });
+            if (!response.ok) throw new Error("Failed to delete user");
+            setUsers(users.filter((user) => user.id !== id));
+        } catch (err) {
+            setError(err.message);
+        }
+    };
+
     return (
         <div>
             <img src={adminDashImg} alt="studio-ghibli-1" className="admin-img" />
@@ -29,7 +62,7 @@ function AdminDashboard() {
                 </Link>
                 
                
-                <a>LISTS</a>
+                <Link to ="/lists"><a>LISTS</a></Link>
 
                 <Link to="/">
                     <a>LOGOUT</a>
@@ -37,11 +70,8 @@ function AdminDashboard() {
                 </nav>
                 <div className="admin-dashboard-form-container">
                     <h3>✩⁺₊✩☽⋆𝖂𝖊𝖑𝖈𝖔𝖒𝖊 𝕭𝖆𝖈𝖐, 𝕮𝖆𝖒𝖎𝖑𝖑𝖆 🐸🌿 ⋆☾✩⁺₊✩ </h3>
-                    <Box sx={{ width: 1400 }}>
-                        <Skeleton />
-                        <Skeleton animation="wave" />
-                        <Skeleton animation={false} />
-                    </Box>
+                    
+                    
                 </div>
             </div>
             <Footer />
