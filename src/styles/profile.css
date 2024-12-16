@@ -23,6 +23,7 @@
     flex-direction: column;
     /* align-items: flex-start; */
     gap: 1em;
+    overflow: auto;
     
     
 }
@@ -99,6 +100,7 @@ button:hover {
         width: 100%;
         border-right:none; 
         align-items: center;
+        overflow: auto;
     }
 
     .profile-form-container{
