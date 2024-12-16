@@ -65,7 +65,8 @@ function ProfilePage () {
             if (!response.ok) throw new Error("Failed to update profile");
             const data = await response.json();
             console.log("Profile updated successfully:", data);
-        alert("Profile updated successfully!");
+            alert("Profile updated successfully!");
+            
     } catch (error) {
         console.error("Update profile error:", error.message);
         alert(`Error updating profile: ${error.message}`);
@@ -82,17 +83,19 @@ function ProfilePage () {
                 </Link>
 
                 <Link to="/discover">
-                <a>DISCOVER</a>
+                    <a>DISCOVER</a>
                 </Link>
 
                 <Link to ="/news">
-                <a>NEWS</a>
+                    <a>NEWS</a>
                 </Link>
 
-                <a>LISTS</a>
+                <Link to ="/lists">
+                    <a>LISTS</a>
+                </Link>
 
                 <Link to="/">
-                <a>LOGOUT</a>
+                    <a>LOGOUT</a>
                 </Link>
                 </nav>
 

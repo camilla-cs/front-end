@@ -24,20 +24,19 @@ function UserDashboard() {
                 <a>NEWS</a>
                 </Link>
 
-                <Link to ="/lists"><a>LISTS</a></Link>
+                <Link to ="/lists">
+                    <a>LISTS</a>
+                </Link>
                 
 
                 <Link to="/">
-                <a>LOGOUT</a>
+                    <a>LOGOUT</a>
                 </Link>
+
                 </nav>
                 <div className="user-dashboard-form-container">
                     <h3>꧁✬◦°⋆⋆°◦. 𝓦𝓮𝓵𝓬𝓸𝓶𝓮 🍵🌸 ◦°⋆⋆°◦✬꧂</h3>
-                    <Box sx={{ width: 1400 }}>
-                        <Skeleton />
-                        <Skeleton animation="wave" />
-                        <Skeleton animation={false} />
-                    </Box>
+                    
                 </div>
             </div>
             <Footer />

@@ -124,9 +124,12 @@ function AnimeSearch () {
                 </Link>
 
                < Link to ="/news">
-                <a>NEWS</a>
+                    <a>NEWS</a>
                 </Link>
-                <Link to ="/lists"><a>LISTS</a></Link>
+                <Link to ="/lists">
+                    <a>LISTS</a>
+                </Link>
+
                 <Link to="/">
                     <a>LOGOUT</a>
                 </Link>
@@ -271,7 +274,7 @@ function AnimeSearch () {
                         );
                     })
                     ) : (
-                    !loading && <p>No results found.</p>
+                    !loading && <p></p>
                     )}
                 </div>
 

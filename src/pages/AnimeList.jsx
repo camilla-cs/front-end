@@ -14,8 +14,15 @@ const token = localStorage.getItem("token");
 
 // Fetch user's saved anime list from the backend
 const fetchMyAnimeList = async () => {
+  const token = localStorage.getItem("token");
+
+  if(!token) {
+    console.error ("No token found in localstorage."); 
+    return alert ("Please log in to getch anime list. ");
+  }
     try {
       const response = await fetch("http://localhost:8080/lists/user", {
+        method:"GET",
         headers: {
            
           Authorization: `Bearer ${token}`,
@@ -43,7 +50,7 @@ const saveListToBackend = async () => {
         aired:anime.aired?.string,
         image_url:anime.images.jpg.image_url,
       })),
-      isPublic: false, // Optional: set to true if you want the list public
+      isPublic: false, 
     };
 
     try {

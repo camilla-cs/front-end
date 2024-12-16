@@ -148,7 +148,9 @@ function News () {
                 </Link>
 
 
-                <Link to ="/lists"><a>LISTS</a></Link>
+                <Link to ="/lists">
+                    <a>LISTS</a>
+                </Link>
 
                 <Link to="/">
                     <a>LOGOUT</a>

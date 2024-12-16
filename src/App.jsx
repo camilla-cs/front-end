@@ -10,6 +10,7 @@ import Signup from './pages/Signup';
 import AdminDashboard from './pages/AdminDashboard';
 import ProtectedRoute from './components/ProtectedRoute';
 import AnimeList from './pages/AnimeList';
+import About from './pages/About';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Routes>
 
         <Route path="/" element={<Home/>}/>
+        <Route path="/about" element={<About/>}/>
         <Route path="/signup" element={<Signup />}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/userDashboard" element={<UserDashboard/>}/>
