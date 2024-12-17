@@ -7,20 +7,29 @@ import Footer from "../components/Footer";
 
 function AnimeList () {
 const [search, setSearch] = useState(""); 
-const [myAnimeList, setMyAnimeList] = useState([]); 
+const [myAnimeList, setMyAnimeList] = useState(() => {
+  const savedList = localStorage.getItem("myAnimeList");
+  return savedList ? JSON.parse(savedList) : [];
+}); 
 const [animeData, setAnimeData] = useState([]); 
-const [cache, setCache] = useState({});
+const [cache, setCache] = useState(() => {
+  const savedCache = localStorage.getItem("animeSearchCache");
+  return savedCache ? JSON.parse(savedCache) : {};
+});
 const token = localStorage.getItem("token");
+
+
+
 
 // Fetch user's saved anime list from the backend
 const fetchMyAnimeList = async () => {
-  const token = localStorage.getItem("token");
+
 
   if(!token) {
     console.error ("No token found in localstorage."); 
     return alert ("Please log in to getch anime list. ");
   }
-    try {
+    try { 
       const response = await fetch("http://localhost:8080/lists/user", {
         method:"GET",
         headers: {
@@ -38,7 +47,11 @@ const fetchMyAnimeList = async () => {
 
   // Save the anime list to the backend
 const saveListToBackend = async () => {
-    const token = localStorage.getItem("token");
+    if (!token) {
+      alert("Please log in to save your anime list.");
+      return;
+  }
+
 
     const listPayload = {
       name: "My Anime List",
@@ -70,7 +83,7 @@ const saveListToBackend = async () => {
     }
   };
 
-
+// get anime data from Jikan API 
 const getData = async () => {
   if (cache[search]) {
     setAnimeData(cache[search]); 
@@ -82,7 +95,12 @@ const getData = async () => {
     if (response.ok) {
       const responseData = await response.json();
       setAnimeData(responseData.data);
-      setCache((prevCache) => ({ ...prevCache, [search]: responseData.data })); // Store result in cache
+      setCache((prevCache) => {
+        const updatedCache = { ...prevCache, [search]: responseData.data };
+        localStorage.setItem("animeSearchCache", JSON.stringify(updatedCache));
+        return updatedCache;
+      });
+      
     } else {
       console.error("Error fetching data:", response.status);
     }
@@ -91,10 +109,18 @@ const getData = async () => {
   }
 };
 
-useEffect(() => {
-    fetchMyAnimeList();
-}, []);
 
+//fetch user list every time the token changes
+useEffect(() => {
+  if (token) fetchMyAnimeList();
+}, [token]);
+
+//Persist list to localStorage
+useEffect(() => {
+  localStorage.setItem("myAnimeList", JSON.stringify(myAnimeList)); 
+}, [myAnimeList]); 
+
+//fetch anime data when searching
 useEffect(() =>{
     if (search) getData();
 }, [search]); 
@@ -178,7 +204,7 @@ return (
                 </div>
                 <div className="anime-results">
             <h2> ☾ 𝙼𝚢 𝙰𝚗𝚒𝚖𝚎 𝙻𝚒𝚜𝚝 ☁️</h2>
-            <button onClick={saveListToBackend} className="save-button">Save List to Backend</button>
+            <button onClick={saveListToBackend} className="save-button">Save List </button>
             {myAnimeList.length > 0 ? (
               myAnimeList.map((anime) => (
                 <div key={anime.mal_id} className="anime-card">

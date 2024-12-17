@@ -30,6 +30,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 1em;
+    overflow: auto;
     
 }
 
@@ -75,6 +76,7 @@
         width: 100%;
         border-right:none; 
         align-items: center;
+        overflow: auto;
     }
 
     
