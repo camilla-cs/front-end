@@ -1,6 +1,4 @@
 import React from "react";
-import Box from '@mui/material/Box';
-import Skeleton from '@mui/material/Skeleton';
 import '../styles/userdashboard.css';
 import DashImg from '../assets/dashboard.jpg' ; 
 import Footer from "../components/Footer";
@@ -24,19 +22,19 @@ function UserDashboard() {
                 <a>NEWS</a>
                 </Link>
 
-                <a>LISTS</a>
+                <Link to ="/lists">
+                    <a>LISTS</a>
+                </Link>
+                
 
                 <Link to="/">
-                <a>LOGOUT</a>
+                    <a>LOGOUT</a>
                 </Link>
+
                 </nav>
                 <div className="user-dashboard-form-container">
                     <h3>꧁✬◦°⋆⋆°◦. 𝓦𝓮𝓵𝓬𝓸𝓶𝓮 🍵🌸 ◦°⋆⋆°◦✬꧂</h3>
-                    <Box sx={{ width: 1400 }}>
-                        <Skeleton />
-                        <Skeleton animation="wave" />
-                        <Skeleton animation={false} />
-                    </Box>
+                    
                 </div>
             </div>
             <Footer />

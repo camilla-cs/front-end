@@ -1,13 +1,5 @@
-/* html, body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #c5d8aa;
-    display: flex;
-    flex-direction: column;
-} */
 
-.admin-img {
+.news-img {
     display: block;
     width:100%; 
     height:15em; 
@@ -15,26 +7,25 @@
 }
 
 /*wrapper for navbar and content*/
-.admin-dashboard-wrapper {
+.news-wrapper {
     display: flex;
     flex-grow: 1;
-    height: calc(100vh - 15em);
     overflow: hidden;
 }
 
-.admin-dashboard-nav {
-    width:20%; 
+.news-nav {
+    /* width:20%;  */
     padding: 1em; 
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1em;
-    overflow: auto;
+   
     
 }
 
-.admin-dashboard-nav > a{
+.news-nav > a{
     display: block;
     background-color:#DAE3DD ;
     width: 6em;
@@ -47,13 +38,13 @@
 }
 
 
-.admin-dashboard-nav >a:hover {
+.news-nav >a:hover {
     background-color:#F6A275; 
     transition: 1s ease;
     cursor: pointer;
 }
 
-.admin-dashboard-form-container {
+.news-form-container {
     flex-grow: 1; 
     background-color: #3c8893;
     border-radius: 1em;
@@ -62,22 +53,44 @@
     color: #19241f;
     text-align: center;
     box-sizing: border-box;
+    justify-content: center;
+    overflow: auto;
+    max-width: 60em;
+   
     
 }
 
+form > button {
+    border-radius: 5em;
+    max-width: 10em;
+    margin:1em;
+
+}
+
+.post-actions > button {
+    max-width: 10em;
+    border-radius: 5em;
+    margin:0.5em;
+}
+
 @media screen and (max-width:1000px) {
-    .admin-dashboard-wrapper {
-        flex-direction: column-reverse;
+    .news-wrapper {
+        flex-direction: column;
+      
     }
 
 
 
-    .admin-dashboard-nav {
+    .news-nav {
         width: 100%;
+        
         border-right:none; 
         align-items: center;
-        overflow: auto;
+        justify-content: center;
     }
 
+    .news-form-container{
+        margin: 8em;
+    }
     
 }
