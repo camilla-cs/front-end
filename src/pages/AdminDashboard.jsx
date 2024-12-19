@@ -12,7 +12,7 @@ function AdminDashboard() {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await fetch(import.meta.env.VITE_API_URL_SERVER, {
+                const response = await fetch("http://localhost:8080/adminDashboard", {
                     method:"GET",
                     headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
                 });
