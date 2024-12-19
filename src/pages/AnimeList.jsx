@@ -30,7 +30,7 @@ const fetchMyAnimeList = async () => {
     return alert ("Please log in to getch anime list. ");
   }
     try { 
-      const response = await fetch(import.meta.env.VITE_API_URL_SERVER, {
+      const response = await fetch("http://localhost:8080/lists/user", {
         method:"GET",
         headers: {
            
@@ -67,7 +67,7 @@ const saveListToBackend = async () => {
     };
 
     try {
-      const response = await fetch(import.meta.env.VITE_API_URL_SERVER, {
+      const response = await fetch("http://localhost:8080/lists", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

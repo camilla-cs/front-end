@@ -21,7 +21,7 @@ function News () {
         setError(null);
 
         try {
-            const response = await fetch (import.meta.env.VITE_API_URL_SERVER); 
+            const response = await fetch ("http://localhost:8080/posts"); 
             if (!response.ok) throw new Error ("Failed to fetch posts."); 
             const data = await response.json(); 
 
