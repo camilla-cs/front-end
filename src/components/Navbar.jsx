@@ -5,7 +5,7 @@ import About from "../pages/About";
 
 function Navbar () {
     return (
-        <nav>
+        <nav role="banner">
             <Link to="/">
             <a>Home</a>
             </Link>
@@ -17,4 +17,4 @@ function Navbar () {
     )
 }
 
-export default Navbar
+export default Navbar; 
