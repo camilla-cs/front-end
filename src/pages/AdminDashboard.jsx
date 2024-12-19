@@ -54,9 +54,6 @@ function AdminDashboard() {
                     <a>DISCOVER</a>
                 </Link>
 
-                <Link to="manageusers">
-                    <a>USERS</a>
-                </Link>
                 <Link to ="/news">
                     <a>NEWS</a>
                 </Link>
