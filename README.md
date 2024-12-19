@@ -107,6 +107,8 @@ The application has been built with different users' backgrounds and motives in 
 
 ![User stories tracking](/src/docs/user-stories.png)
 ![User stories tracking 2](/src/docs/user-stories2.png)
+
+Revised User stories
 ![User stories tracking 3](/src/docs/user-stories3.png)
 ![User stories tracking 4](/src/docs/user-stories4.png)
 
@@ -139,6 +141,9 @@ The following wireframes are not the final version of the application.
 ![Recommendations results](/src/docs/wireframe-recommendations.png)
 ### Announcements page
 ![Announcements page](/src/docs/wireframe-announcements.png)
+
+The following wireframes are the final version of the application. 
+
 
 ## Tracking the tasks 
 [Trello Board](https://trello.com/invite/b/673536c7a5b3ccdad32707ea/ATTI050239c69f4df74c90db72906ccf17613B637CFE/t3a2-full-stack-app)
