@@ -21,7 +21,7 @@ function News () {
         setError(null);
 
         try {
-            const response = await fetch ("http://localhost:8080/posts"); 
+            const response = await fetch (`${import.meta.env.VITE_API_URL_SERVER}/posts`); 
             if (!response.ok) throw new Error ("Failed to fetch posts."); 
             const data = await response.json(); 
 
@@ -45,7 +45,7 @@ function News () {
         setError(null);
 
         try {
-            const response = await fetch("http://localhost:8080/posts", {
+            const response = await fetch(`${import.meta.env.VITE_API_URL_SERVER}/posts`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -78,7 +78,7 @@ function News () {
         const token = localStorage.getItem("token"); // Ensure the token is correctly stored and retrieved
 
         try {
-            const response = await fetch(`http://localhost:8080/posts/${postId}`, {
+            const response = await fetch(`${import.meta.env.VITE_API_URL_SERVER}/posts/${postId}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -111,7 +111,7 @@ function News () {
 
         setError(null);
         try {
-            const response = await fetch(`http://localhost:8080/posts/${postId}`, {
+            const response = await fetch(`${import.meta.env.VITE_API_URL_SERVER}/posts/${postId}`, {
                 method: "DELETE",
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`, // JWT for authentication

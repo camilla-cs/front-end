@@ -26,7 +26,7 @@ function AnimeSearch () {
         setError(null); 
 
         try {
-            const response = await fetch (`http://localhost:8080/anime/browse?title=${searchQuery}`);
+            const response = await fetch (`${import.meta.env.VITE_API_URL_SERVER}/anime/browse?title=${searchQuery}`);
             if (!response.ok) {
                 throw new Error ("Failed to fetch anime"); 
             }
@@ -49,7 +49,7 @@ function AnimeSearch () {
 
     try {
         
-        const response = await fetch (`http://localhost:8080/anime/genre?genre=${genre}&year=${year}`);
+        const response = await fetch (`${import.meta.env.VITE_API_URL_SERVER}/anime/genre?genre=${genre}&year=${year}`);
         if (!response.ok) {
             throw new Error("Failed to fetch filtered anime.");
         }
@@ -71,7 +71,7 @@ function AnimeSearch () {
     setError(null);
 
     try {
-        const response = await fetch(`http://localhost:8080/anime/random`);
+        const response = await fetch(`${import.meta.env.VITE_API_URL_SERVER}/anime/random`);
         if (!response.ok) {
             throw new Error("Failed to fetch random anime.");
         }
@@ -93,7 +93,7 @@ function AnimeSearch () {
         setError(null);
 
         try {
-            const response = await fetch(`http://localhost:8080/anime/recommendations?title=${encodeURIComponent(searchQuery)}`); 
+            const response = await fetch(`${import.meta.env.VITE_API_URL_SERVER}/anime/recommendations?title=${encodeURIComponent(searchQuery)}`); 
             if (!response.ok) {
                 throw new Error ("Failed to fetch anime recommendations"); 
             }

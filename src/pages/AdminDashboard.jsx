@@ -12,7 +12,7 @@ function AdminDashboard() {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await fetch("http://localhost:8080/adminDashboard", {
+                const response = await fetch(`${import.meta.env.VITE_API_URL_SERVER}/adminDashboard`, {
                     method:"GET",
                     headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
                 });
@@ -29,7 +29,7 @@ function AdminDashboard() {
 
     const handleDelete = async (id) => {
         try {
-            const response = await fetch(`http://localhost:8080/profile/${id}`, {
+            const response = await fetch(`${import.meta.env.VITE_API_URL_SERVER}/profile/${id}`, {
                 method: "DELETE",
                 headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
             });
