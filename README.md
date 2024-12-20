@@ -4,7 +4,7 @@ Documentation for T3A2-B Coder Academy assignment.
 ## Deployed website link
 [Deployed website](https://animetrail.netlify.app/)
 
-## Front-end Repository : [front-end](https://github.com/camilla-cs/front-end)
+## Front-end Repository : [front-end](https://github.com/camilla-cs/front-end)
 
 ## Back-end Repository : [server-backend](https://github.com/camilla-cs/server-backend)
 
@@ -65,11 +65,15 @@ The app is aimed at anime enthusiasts of all ages, from casual viewers who want 
 ## Dataflow Diagram 
 The application's Dataflow Diagram (DFD) was made with draw.io in order to provide a graphical representation on how data flows through the application for a better understanding of the latest. 
 ![Dataflow Diagram](/src/docs/dfd.png)
+
+Final Version of Application Architecture Diagram
 ![Final version of Dataflow Diagram](/src/docs/T3A2-B%20Dataflow%20Diagram.drawio.png)
 
 ## Application Architecture Diagram 
 Application Architecture Diagram built using draw.io. 
 ![Application Architecture Diagram](/src/docs/application-arch-diagram.png)
+
+Final version of Application Architecture Diagram
 ![Final version of Application Architecture Diagram](/src/docs/T3A2-B%20Architecture%20Diagram.drawio.png)
 
 ## User Stories 
