@@ -1,6 +1,14 @@
 # AnimeTrail
 Documentation for T3A2-B Coder Academy assignment. 
 
+## Deployed website link
+[Deployed website](https://animetrail.netlify.app/)
+
+## Front-end Repository : [front-end](https://github.com/camilla-cs/front-end)
+
+## Back-end Repository : [server-backend](https://github.com/camilla-cs/server-backend)
+
+
 ## Chapters 
 
 - [ R1: Introduction](#introduction)
@@ -8,7 +16,8 @@ Documentation for T3A2-B Coder Academy assignment.
 - [ R3: Application Architecture Diagram](#application-architecture-diagram)
 - [ R4: User Stories](#user-stories)
 - [R5: Wireframes](#wireframes)
-- [R6: Tracking the Tasks](#tracking-the-tasks)
+- [R6: Testing](#testing)
+- [R7: Tracking the Tasks](#tracking-the-tasks)
 
 ## Introduction 
 ### Purpose 
@@ -56,10 +65,12 @@ The app is aimed at anime enthusiasts of all ages, from casual viewers who want 
 ## Dataflow Diagram 
 The application's Dataflow Diagram (DFD) was made with draw.io in order to provide a graphical representation on how data flows through the application for a better understanding of the latest. 
 ![Dataflow Diagram](/src/docs/dfd.png)
+![Final version of Dataflow Diagram](/src/docs/T3A2-B%20Dataflow%20Diagram.drawio.png)
 
 ## Application Architecture Diagram 
 Application Architecture Diagram built using draw.io. 
 ![Application Architecture Diagram](/src/docs/application-arch-diagram.png)
+![Final version of Application Architecture Diagram](/src/docs/T3A2-B%20Architecture%20Diagram.drawio.png)
 
 ## User Stories 
 The user stories for this application were made by following [Atlassian's](https://www.atlassian.com/agile/project-management/user-stories) format. 
@@ -100,7 +111,7 @@ The application has been built with different users' backgrounds and motives in 
 |Name | Story|
 |:----|:-----|
 |Camilla|As Camilla, I want to filter anime by genre and themes so I can find shows that align with my interests and avoid those I might not enjoy.|
-|Gwen| As Gwen, I want to search for anime based on release date so that I can rediscover the shows I watched as a child.|
+|Gwen| As Gwen, I want to search for anime based on genre so that I can rediscover the shows I watched as a child.|
 |Peter| As Peter, I want to see regular updates and news about the anime industry, so that I can stay informed about trends for my career goals.|
 |Rosanna| As Rosanna, I want a simple anime recommendation section so that I can connect with my daughter. |
 |Johan| As Johan, I want to find popular anime titles, so that I can talk about them with my friends and feel included in conversations.|
@@ -143,6 +154,47 @@ The following wireframes are not the final version of the application.
 ![Announcements page](/src/docs/wireframe-announcements.png)
 
 The following wireframes are the final version of the application. 
+
+### Homepage
+![Homepage](/src/docs/homepage_final.png)
+### Sign up page
+![Sign up page](/src/docs/signup_final.png)
+### Login page
+![Login page](/src/docs/login_final.png)
+### User Dashboard
+![User dashboard](/src/docs/userdashboard_final.png)
+### Admin Dashboard
+![Admin dashboard](/src/docs/admindashboard_final.png)
+### Profile page
+![Profile page](/src/docs/profile_final.png)
+### Discover anime page
+![Search anime title](/src/docs/discover_final.png)
+### Announcements page
+![Announcements page](/src/docs/news_final.png)
+### Listts page
+![Lists page](/src/docs/lists_final.png)
+
+## Testing
+Below are the screenshots of the development and production testing followed by Bruno screenshots of routes testing.
+In the front-end I used [vitest](https://vitest.dev/) and in the back-end [jest](https://jestjs.io/).  
+![Development Testing](/src/docs/T3A2-B%20TESTING%20-%20DEVELOPMENT%20TESTING.pdf)
+![Production Testing](/src//docs/T3A2-B%20TESTING%20-%20PRODUCTION%20TESTING.pdf)
+![Bruno User Signup ](/src/docs/bruno_signup.png)
+![Bruno User Login](/src/docs/bruno_login.png)
+![Bruno Admin Dashboard - !isadmin](/src/docs/admin%20dashboard1.png)
+![Bruno Admin Dashboard- isadmin](/src/docs/admin%20dashboard%202.png)
+![Bruno User Dashboard](/src/docs/user_dashboard.png)
+![Bruno Get Profile](/src/docs/get_profile.png)
+![Bruno Update Profile](/src/docs/update_profile.png)
+![Bruno Discover Anime by Title](/src/docs/browse_anime.png)
+![Bruno Get Random Anime](/src/docs/random_anime.png)
+![Bruno Filter Anime by Genre](/src/docs/filter_genre.png)
+![Bruno Get Recommendations by Title](/src/docs/get_recommendations.png)
+![Bruno Create Posts](/src/docs/create_post1.png)
+![Bruno Create Posts](/src/docs/create_post2.png)
+![Bruno Update Post](/src/docs/post_updated.png)
+![Bruno Delete Post](/src/docs/post_deleted.png)
+
 
 
 ## Tracking the tasks 
