@@ -22,6 +22,7 @@ npm install
 ```sh
 VITE_API_URL_SERVER=YOUR URL HERE
 ```
+(for example: http://localhost:8080)
 
 
 4. **Start the application**: 
@@ -44,15 +45,17 @@ JWT_SECRET_KEY= YOUR JWT SECRET KEY HERE
 mongosh
 ```
 
-8. **Install the packages**: 
+8. **Seed data to database**: 
+```sh
+npm run seed 
+```
+
+9. **Install the packages**:
+- open a new terminal shell and run the following command:  
 ```sh
 npm install 
 ```
 
-9. **Seed data to database**: 
-```sh
-npm run seed 
-```
 
 10. **Start the server**: 
 ```sh
