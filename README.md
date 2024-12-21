@@ -8,6 +8,56 @@ Documentation for T3A2-B Coder Academy assignment.
 
 ## Back-end Repository : [server-backend](https://github.com/camilla-cs/server-backend)
 
+## How to install and run the application 
+1. **Clone the Front-end repository** 
+
+2. **Install Dependencies** : 
+- Navigate to the project directory and run 
+```bash
+npm install 
+```
+
+3. **Create .env file**:
+- In the root directory, create a .env file and add the following: 
+```sh
+VITE_API_URL_SERVER=YOUR URL HERE
+```
+
+
+4. **Start the application**: 
+- Run the following command:
+```bash
+npm run dev
+```
+
+5. **Clone the Back-end repository**
+
+6. **Create a .env file**: 
+- in the root directory of the back-end repository, add the following in the .env file: 
+```sh
+DATABASE_URL= YOUR URL HERE
+JWT_SECRET_KEY= YOUR JWT SECRET KEY HERE
+```
+
+7. **Start MongoDB**: 
+```sh
+mongosh
+```
+
+8. **Install the packages**: 
+```sh
+npm install 
+```
+
+9. **Seed data to database**: 
+```sh
+npm run seed 
+```
+
+10. **Start the server**: 
+```sh
+npm run dev
+```
 
 ## Chapters 
 
