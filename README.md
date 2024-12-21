@@ -175,7 +175,7 @@ The following wireframes are the final version of the application.
 ![Search anime title](/src/docs/discover_final.png)
 ### Announcements page
 ![Announcements page](/src/docs/news_final.png)
-### Listts page
+### Lists page
 ![Lists page](/src/docs/lists_final.png)
 
 ## Testing
@@ -229,5 +229,28 @@ Labeling the tasks by color and focusing on one task at the time was an essentia
 ![Trello 19](/src/docs/Trello19.png)
 ![Trello 20](/src/docs/Trello20.png)
 ![Trello 21](/src/docs/Trello21.png) 
+![Trello 22](/src/docs/Trello%2022.png)
+![Trello 23](/src/docs/Trello%2023.png)
+![Trello 24](/src/docs/Trello%2024.png)
+![Trello 25](/src/docs/Trello%2025.png)
+![Trello 26](/src/docs/Trello%2026.png)
+![Trello 27](/src/docs/Trello%2027.png)
+![Trello 28](/src/docs/Trello%2028.png)
+![Trello 29](/src/docs/Trello%2029.png)
+![Trello 30](/src/docs/Trello%2030.png)
+![Trello 31](/src/docs/Trello%2031.png)
+![Trello 32](/src/docs/Trello%2032.png)
+![Trello 33](/src/docs/Trello%2033.png)
+![Trello 34](/src/docs/Trello%2034.png)
+![Trello 35](/src/docs/Trello%2035.png)
+![Trello 36](/src/docs/Trello%2036.png)
+![Trello 37](/src/docs/Trello%2037.png)
+![Trello 38](/src/docs/Trello%2038.png)
+![Trello 39](/src/docs/Trello%2039.png)
+![Trello 40](/src/docs/Trello%2040.png)
+![Trello 41](/src/docs/Trello%2041.png)
+![Trello 42](/src/docs/Trello%2042.png)
+
+
 
 
