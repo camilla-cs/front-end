@@ -181,8 +181,8 @@ The following wireframes are the final version of the application.
 ## Testing
 Below are the screenshots of the development and production testing followed by Bruno screenshots of routes testing.
 In the front-end I used [vitest](https://vitest.dev/) and in the back-end [jest](https://jestjs.io/).  
-![Development Testing](/src/docs/T3A2-B%20TESTING%20-%20DEVELOPMENT%20TESTING.pdf)
-![Production Testing](/src//docs/T3A2-B%20TESTING%20-%20PRODUCTION%20TESTING.pdf)
+![Development Testing](/src/docs/T3A2-B%20TESTING%20-%20DEVELOPMENT%20TESTING.jpg)
+![Production Testing](/src//docs/T3A2-B%20TESTING%20-%20PRODUCTION%20TESTING.jpg)
 ![Bruno User Signup ](/src/docs/bruno_signup.png)
 ![Bruno User Login](/src/docs/bruno_login.png)
 ![Bruno Admin Dashboard - !isadmin](/src/docs/admin%20dashboard1.png)
